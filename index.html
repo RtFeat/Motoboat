@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/normalize.min.css">
+    <link rel="icon" href="images/Icon/Icon.svg" sizes="32x32">
+    <title>MOTORSBOAT</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7afc69e1-c992-4b69-b767-ff78c3106b8b&lang=ru_RU"
+            type="text/javascript"></script>
+</head>
+<div class="container">
+    <body>
+    <header>
+        <div class="main-img">
+            <div class="header_">
+                <div class="header_menu has-submenu ">
+                    <div class="menu-container submenu">
+                        <ul>
+                            <li class="menu_1"><a class="menu_1_link" href="#catalog">Каталог</a></li>
+                            <li class="menu_1"><a class="menu_1_link" href="#category">Категории</a></li>
+                            <li class="menu_1"><a class="menu_1_link" href="#contacts">Контакты</a></li>
+                            <li class="menu_1"><a class="menu_1_link" href="#state">Статьи</a></li>
+                            <li class="menu_1"><a class="menu_1_link" href="#reviews">Отзывы</a></li>
+                            <li class="menu_1"><a class="menu_1_link" href="#mailing">Рассылка</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="spb">
+                    <div class="search">
+                        <input class="search_input" id="searchInput" type="text" placeholder="Поиск" maxlength="200">
+                        <div class="block_search">
+                            <div data-img_1="images/header/search.svg" id="searchResults"></div>
+                        </div>
+                    </div>
+                    <div class="pb">
+                        <div class="basket" id="open">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="person_container"
+            id="person_container">
+           <div class="person_modal">
+               <div class="person_modal_h1_close">
+                   <h1 class="person_modal_h1">Корзина</h1>
+                   <button class="person_modal_close" id="close"></button>
+               </div>
+
+               <div class="person_modal_div2_main">
+                   <div class="person_modal_div2_img cart-content">
+                   </div>
+                   <div class="person_modal_div2_text cart-items">
+
+                   </div>
+               </div>
+               <div class="person_modal_line"></div>
+               <div class="person_modal_div2_text_2 cart-total">
+
+               </div>
+               <div class="person_modal_btn">
+                   <button class="btn_2" id="close_1">Продолжить покупки
+                       <svg class="btn_line" xmlns="http://www.w3.org/2000/svg" width="57" height="6"
+                            viewBox="0 0 57 6" fill="none">
+                           <path d="M51.3948 1.58215L55.0509 3.11049L51.3948 4.63882V3.11049V1.58215Z"
+                                 fill="white"/>
+                           <path d="M0.209961 3.11049H55.0509M55.0509 3.11049L51.3948 1.58215V3.11049V4.63882L55.0509 3.11049Z"
+                                 stroke="white"/>
+                       </svg>
+                   </button>
+                   <button id="myButton_1" class="btn_3 buy-button">Купить
+                       <svg class="btn_line" xmlns="http://www.w3.org/2000/svg" width="57" height="6"
+                            viewBox="0 0 57 6" fill="none">
+                           <path d="M51.3948 1.58215L55.0509 3.11049L51.3948 4.63882V3.11049V1.58215Z"
+                                 fill="white"/>
+                           <path d="M0.209961 3.11049H55.0509M55.0509 3.11049L51.3948 1.58215V3.11049V4.63882L55.0509 3.11049Z"
+                                 stroke="white"/>
+                       </svg>
+                   </button>
+               </div>
+               <div class="input_main_2">
+                   <div class="input_2_1">
+                       <div>
+                           <div class="input_txt_2">
+                               ФИО:
+                           </div>
+                           <div class="input_txt_2">
+                               <input id="input_6" class="input_2" placeholder="Иванов Иван Иванович" type="text">
+                           </div>
+                       </div>
+                       <div>
+                           <div class="input_txt_2">
+                               Телефон:
+                           </div>
+                           <div class="input_txt_2">
+                               <input id="input_5" class="input_2" placeholder="+7-9xxxxxxxxx" type="number">
+                           </div>
+                       </div>
+                   </div>
+                   <div class="input_2_2">
+                       <div>
+                           <div class="input_txt_2">
+                               Адрес:
+                           </div>
+                           <div class="input_txt_2">
+                               <input id="input_4" class="input_2" placeholder="г.Омск, Ул.Ленина, д20, кв1" type="text">
+                           </div>
+                       </div>
+                       <div>
+                           <div class="input_txt_2">
+                               Номер карты:
+                           </div>
+                           <div class="Номер карты">
+                               <input id="input_3" class="input_2" placeholder="2200-xxxx-xxxx-xxxx:" type="text">
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+            <div class="header_main_name">
+                <div class="header-name">
+                    MOTORSBOAT
+                </div>
+                <div class="header-name_2">
+                    лодки & моторы
+                </div>
+                <div class="header-name_btn">
+                    <a href="#catalog">
+                        <button class="btn_1">Перейти в каталог <img src="images/header/line.svg" alt=""></button>
+                    </a>
+                </div>
+            </div>
+            <div class="header_where">
+                <div class="header_phone">
+                    8(999) 159 69-67
+                </div>
+                <div class="header_time">
+                    Время работы:<br> Пн-Вс 10-19
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="sect_1" id="catalog">
+        <div class="sect_1_main">
+            <div class="sect_1_title">
+                <div class="sect_1_title_1" id="open_1">Новые поступления</div>
+                <div class="sect_1_title_2" id="open_2">Популярные</div>
+                <div class="sect_1_title_3" id="open_3">Акции</div>
+            </div>
+            <div class="sect_1_products_main_1" id="sect_1_product_main_1">
+                <div class="sect_1_products">
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_1"></div>
+                        <div class="sect_1_product_1_name" id="btn_1">Комплект сальников<br>Т15-15(8М0082880).<br>200 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart"  data-name="Комплект сальников"
+                                    data-price="200" data-img="images/sect_1/catalog/salniki.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_2"></div>
+                        <div class="sect_1_product_1_name">Рюкзак туристический<br>Т16-16(8М0082881)<br>800 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Рюкзак туристический"
+                                    data-price="800" data-img="images/sect_1/catalog/bag.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_3"></div>
+                        <div class="sect_1_product_1_name">Весы электронные<br>Т17-17(8М0082882)<br>500 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Весы электронные"
+                                    data-price="500" data-img="images/sect_1/catalog/vesi.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_social">
+                            <div class="sect_1_product_1_social_header">
+                                Мы в соцсетях:
+                            </div>
+                            <div class="sect_1_product_1_social_socials">
+                                <a href="https://vk.com/motobotspb?ysclid=lmc5apup4g222762436">
+                                    <div class="sect_1_product_1_social_vk"></div>
+                                </a>
+                                <a href="tel:+7(999)1596967">
+                                    <div class="sect_1_product_1_social_whatsapp"></div>
+                                </a>
+                                <a href="https://telegram.me/ru_moto_bot">
+                                    <div class="sect_1_product_1_social_tg"></div>
+                                </a>
+                                <a href="https://www.youtube.com/playlist?list=PLs4ZZTDgSRI0LOgGg2xEf9PLMiO66Q3Rw">
+                                    <div class="sect_1_product_1_social_youtube"></div>
+                                </a>
+                            </div>
+                            <div class="sect_1_product_1_social_useful">
+                                Полезная информация:
+                            </div>
+                            <div class="sect_1_product_1_social_si">
+                                <div class="sect_1_product_1_social_about_shop_img"></div>
+                                <div class="sect_1_product_1_social_about_shop">О магазине</div>
+                            </div>
+                            <div class="sect_1_product_1_social_more">
+                                Узнайте больше о нашем магазине: кто мы,<br>наши клиенты и почему они выбрали именно<br>нас.
+                                Наши контакты и реквизиты.
+                            </div>
+                            <div class="sect_1_product_1_social_fl">
+                                <div class="sect_1_product_1_social_further"><a class="sect_1_product_1_social_further"
+                                                                                href="#contacts">Подробнее</a>
+                                </div>
+                                <a href="#">
+                                    <div class="sect_1_product_1_social_line"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_4"></div>
+                        <div class="sect_1_product_1_name">Пластилин рыболовный<br>Т18-18(8М0082883)<br>200 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Пластилин рыболовный"
+                                    data-price="300" data-img="images/sect_1/catalog/plastilin.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_5"></div>
+                        <div class="sect_1_product_1_name">Стопора рыболовные<br>Т19-19(8М0082884)<br>100 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Стопора рыболовные"
+                                    data-price="100" data-img="images/sect_1/catalog/stopora.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_6"></div>
+                        <div class="sect_1_product_1_name">Набор оснастки<br>Т20-20(8М0082885)<br>400 руб</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Набор оснастки"
+                                    data-price="400" data-img="images/sect_1/catalog/nabor ribalki.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_7"></div>
+                        <div class="sect_1_product_1_name">Ножницы рыболовные<br>Т21-21(8М0082886)<br> 50 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Ножницы рыболовные"
+                                    data-price="50" data-img="images/sect_1/catalog/knife_child.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="sect_1_products_main" id="sect_1_product_main">
+                <div class="sect_1_products_2">
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_8"></div>
+                        <div class="sect_1_product_1_name">Набор мебели<br>Т22-22(8М0082887)<br>950 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Набор мебел" data-price="950"
+                                    data-img="images/sect_1/catalog/table.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_9"></div>
+                        <div class="sect_1_product_1_name">Катушка рыболовная<br>Т23-23(8М0082888)<br>800</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Катушка рыболовная"
+                                    data-price="800" data-img="images/sect_1/catalog/katushka.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_10"></div>
+                        <div class="sect_1_product_1_name">Летний костюм<br>Т24-24(8М0082889)<br>500 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Летний костюм"
+                                    data-price="500" data-img="images/sect_1/catalog/costume.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_11"></div>
+                        <div class="sect_1_product_1_name">Максимальный активатор<br>Т25-25(8М00828810)<br>200 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Максимальный активатор"
+                                    data-price="200" data-img="images/sect_1/catalog/jija.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_12"></div>
+                        <div class="sect_1_product_1_name">Садок 4 колеца<br>Т26-26(8М00828811)<br>400 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Садок 4 колеца"
+                                    data-price="400" data-img="images/sect_1/catalog/sadok.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_13"></div>
+                        <div class="sect_1_product_1_name">Умная блесна<br>Т27-27(8М00828812)<br>250 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Умная блесна" data-price="250"
+                                    data-img="images/sect_1/catalog/smart_blesna.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_14"></div>
+                        <div class="sect_1_product_1_name">Сумка EVA<br>Т28-28(8М00828813)<br>300 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Сумка EVA" data-price="300"
+                                    data-img="images/sect_1/catalog/bag_small.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_15"></div>
+                        <div class="sect_1_product_1_name">Термос Тайган<br>Т29-29(8М00828814)<br>150 руб.</div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Термос Тайган"
+                                    data-price="150" data-img="images/sect_1/catalog/termos.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sect_1_products_main_3" id="sect_1_product_main_3">
+                <div class="sect_1_products_2">
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_16"></div>
+                        <div class="sect_1_product_1_name">Светлячки для рыбалки<br>Т30-30(8М00828815)<br>
+                            <del>200 руб</del>
+                            - 150 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Светлячки для рыбалки"
+                                    data-price="150" data-img="images/sect_1/catalog/svetlychok.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_17"></div>
+                        <div class="sect_1_product_1_name">Охотничий бинокль<br>Т31-31(8М00828816)<br>
+                            <del>950 руб</del>
+                            - 900 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Охотничий бинокль"
+                                    data-price="950" data-img="images/sect_1/catalog/binokl.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_18"></div>
+                        <div class="sect_1_product_1_name">Расширитель-Зевник<br>Т32-32(8М00828817)<br>
+                            <del>800 руб</del>
+                            - 650 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Расширитель-Зевник"
+                                    data-price="650" data-img="images/sect_1/catalog/rashiritel.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_19"></div>
+                        <div class="sect_1_product_1_name">Флюорокарбоновая леска<br>Т33-33(8М00828818)<br>
+                            <del>500 руб</del>
+                            - 350 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Флюорокарбоновая леска"
+                                    data-price="350" data-img="images/sect_1/catalog/leska.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_20"></div>
+                        <div class="sect_1_product_1_name">Спасательные шипы<br>Т34-34(8М00828819)<br>
+                            <del>500 руб</del>
+                            - 400 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Спасательные шипы"
+                                    data-price="400" data-img="images/sect_1/catalog/help.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_21"></div>
+                        <div class="sect_1_product_1_name">Сигнализатор поклевки<br>Т35-35(8М00828820)<br>
+                            <del>300 руб</del>
+                            - 200 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Сигнализатор поклевки"
+                                    data-price="200" data-img="images/sect_1/catalog/signalizator.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_22"></div>
+                        <div class="sect_1_product_1_name">Быстрорастворимые пакеты<br>Т36-36(8М00828821)<br>
+                            <del>200 руб</del>
+                            - 100 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1 add-to-cart" data-name="Быстр-ые пакеты"
+                                    data-price="100" data-img="images/sect_1/catalog/pva.webp">Купить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sect_1_product_1">
+                        <div class="sect_1_product_1_img_23"></div>
+                        <div class="sect_1_product_1_name">Воблер, блесна - наживка<br>Т37-37(8М00828822)<br>
+                            <del>300 руб</del>
+                            - 150 руб.
+                        </div>
+                        <div class="sect_1_product_1_btn">
+                            <button class="sect_1_product_1_btn_1">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sect_2">
+        <div class="sect_2_main">
+            <div class="sect_2_main_category" id="category">
+                Категории
+            </div>
+            <div class="sect_2_main_imgs">
+                <a href="#catalog">
+                    <div class="sect_2_main_imgs_1 imgs_1"></div>
+                </a>
+                <a href="#catalog">
+                    <div class="sect_2_main_imgs_2 imgs_1"></div>
+                </a>
+                <a href="#catalog">
+                    <div class="sect_2_main_imgs_3 imgs_1"></div>
+                </a>
+                <a href="#catalog">
+                    <div class="sect_2_main_imgs_4 imgs_1"></div>
+                </a>
+                <a href="#catalog">
+                    <div class="sect_2_main_imgs_5 imgs_1"></div>
+                </a>
+                <a href="#catalog">
+                    <div class="sect_2_main_imgs_6 imgs_1"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="sect_3">
+        <div class="sect_3_main">
+            <div class="sect_3_main_paper" id="state">
+                Статьи
+            </div>
+            <div class="sect_3_main_boats">
+                <div class="sect_3_main_boats_1">
+                    <div class="sect_3_main_boats_1_img"></div>
+                    <div class="sect_3_main_boats_1_txt">
+                        НАДУВНЫЕ ЛЕГКИЕ КАЯКИ<br>(ЛОДКИ) И ВСЁ ЧТО НУЖНО<br>ЗНАТЬ ОБ ЭТОМ
+                    </div>
+                    <div class="sect_3_boats_hover">
+                        <div class="sect_3_main_boats_1_smalltxt">
+                            Компактные и легкие суда, созданные для<br>созданные для плавания на...........
+                        </div>
+                        <div class="txt_2">
+                            на реках и озерах. Их портативность и простота монтажа
+                            делают их популярными среди любителей
+                            активного отдыха и водных приключений.
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_3_main_boats_2">
+                    <div class="sect_3_main_boats_2_img"></div>
+                    <div class="sect_3_main_boats_1_txt">
+                        ГУМАНИТАРНЫЕ НАДУВНЫЕ<br>ЛОДКИ И ВСЁ ЧТО НУЖНО<br>ЗНАТЬ ОБ ЭТОМ
+                    </div>
+                    <div class="sect_3_boats_hover">
+                        <div class="sect_3_main_boats_1_smalltxt">
+                            специализированные суда, предназначенные<br>и созданные для плавания на...........
+                        </div>
+                        <div class="txt_2">
+                            спасательных операций и гуманитарной помощи в чрезвычайных ситуациях.
+                            Их легкость и устойчивость делают их важным инструментом в борьбе с бедствиями и авариями.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="sect_6_link" href="">
+                <div class="sect_sect_3_main_blocks">
+                    <div class="sect_3_main_blockinf">
+                        <div class="sect_3_main_blockinf_img"></div>
+                        <div class="sect_3_block_hover">
+                            <div class="sect_3_main_blockinf_txt_1">ГЛИССИРОВАНИЕ НАДУВНЫХ ЛОДОК И ВСЁ ЧТО НУЖНО ЗНАТЬ
+                                ОБ ЭТОМ
+                            </div>
+                            <div class="sect_3_main_blockinf_txt_2">Глиссирование является одним из самых экономичных
+                                вариантов
+                                передвижения...
+                                <div class="txt_1">
+                                    плавательного средства, который стал доступен после появления мощных и в то же время
+                                    легких двигателей внутреннего сгорания.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="sect_4">
+        <div class="sect_4_feedback">
+            <div class="sect_4_feedback_txt" id="reviews">
+                Последние отзывы
+            </div>
+            <div class="sect_4_feedback_motors">
+                <div class="sect_4_feedback_motors_1">
+                    <div class="sect_1_product_1_img_5 motor">
+                        <div class="sect_4_feedback_motors_2_txt_big_1">
+                            Набор оснастки<br>Т20-20(8М0082885)
+                        </div>
+                        <div class="sect_4_feedback_motors_2_txt_small_1">
+                            Эксплуатирую 4 сезона
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_4_feedback_motors_2">
+                    <div class="sect_4_feedback_motors_2_img">
+                        <div class="sect_4_feedback_motors_2_txt">
+                            <div class="sect_4_feedback_motors_2_txt_big">
+                                Лодочный мотор HIDEA<br>(Хайди) HD 9.9 FHS
+                            </div>
+                            <div class="sect_4_feedback_motors_2_txt_small">
+                                Эксплуатирую 3 сезона
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_4_feedback_motors_3">
+                    <div class="sect_1_product_1_img_9 motor">
+                        <div class="sect_4_feedback_motors_2_txt_big_1">
+                            Катушка рыболовная<br>Т23-23(8М0082888)
+                        </div>
+                        <div class="sect_4_feedback_motors_2_txt_small_1">
+                            Эксплуатирую 2 сезона
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sect_5" id="mailing">
+        <div class="sect_5_main">
+            <div class="sect_5_main_communicate">
+                <div class="sect_5_main_mailing">
+                    Рассылка:
+                </div>
+                <div class="sect_5_main_name_sect">
+                    <div class="sect_5_main_name">
+                        Имя:
+                    </div>
+                    <input class="sect_5_input" id="myInput1" type="text">
+                </div>
+                <div class="sect_5_main_email_sect">
+                    <div class="sect_5_main_email">
+                        Email:
+                    </div>
+                    <input class="sect_5_input" type="text" id="myInput">
+                </div>
+                <div class="sect_5_main_btn">
+                    <button id="myButton" class="sect_5_btn"></button>
+                </div>
+                <div id="result"></div>
+            </div>
+            <div class="sect_5_main_img">
+            </div>
+        </div>
+    </section>
+    <section class="sect_6" id="contacts">
+        <div class="sect_6_main">
+            <div class="sect_6_main_line"></div>
+            <div class="sect_6_main_down">
+                <div class="sect_6_main_down_1">
+                    <div class="sect_6_main_down_1_img"></div>
+                    <div class="sect_6_main_down_1_txt_img">
+                        <div class="sect_6_txt_img">
+                            <div class="sect_6_img"></div>
+                            <div class="sect_6_txt">8(999) 159 69-67</div>
+                        </div>
+                        <div class="sect_6_txt_img_1">
+                            <div class="sect_6_img_1"></div>
+                            <div class="sect_6_txt_1">Пн-Вс<br>C 10:00 - 19:00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sect_6_main_down_2">
+                    <div class="sect_6_about_shop">
+                        О магазине
+                    </div>
+                    <div class="sect_6_about_category">
+                        <div class="news" id="link-1" onmouseover="changeItem()" onmouseout="rechangeItem()">Новости
+                        </div>
+                        <a class="sect_6_link" href="#">
+                            <div class="how_buy">Главная</div>
+                        </a>
+                        <a class="sect_6_link" href="#">
+                            <div class="delivery">Доставка</div>
+                        </a>
+                        <a class="sect_6_link" href="#state">
+                            <div class="about_shop">Статьи</div>
+                        </a>
+                        <a class="sect_6_link" href="#catalog">
+                            <div class="guarantee">К покупкам</div>
+                        </a>
+                        <a class="sect_6_link" href="#contacts">
+                            <div class="contacts">Контакты</div>
+                        </a>
+                    </div>
+                    <div class="sect_6_NEWS" id="color-1">Новости:</div>
+                    <div class="sect_6_socials">
+                        <a href="https://vk.com/motobotspb?ysclid=lmc5apup4g222762436">
+                            <div class="vk"></div>
+                        </a>
+                        <a href="tel:+7(999)1596967">
+                            <div class="whats"></div>
+                        </a>
+                        <a href="https://telegram.me/ru_moto_bot">
+                            <div class="tg"></div>
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PLs4ZZTDgSRI0LOgGg2xEf9PLMiO66Q3Rw">
+                            <div class="youtube"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="sect_6_main_down_3">
+                    <div class="sect_6_main_map" id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer_main">
+            <div class="again_up">
+                <a class="sect_6_link" href="#">
+                    <div class="footer_again">Наверх</div>
+                </a>
+                <a class="sect_6_link" href="#">
+                    <div class="footer_line_up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="20" viewBox="0 0 7 23" fill="none">
+                            <path d="M2 2.46667L3.5 1L5 2.46667H3.5H2Z" fill="white"/>
+                            <path d="M3.5 23L3.5 1M3.5 1L2 2.46667H3.5H5L3.5 1Z" stroke="white"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="license">@Motorsboat, 2021</div>
+        </div>
+    </footer>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="JS/javaScriptFile.js"></script>
+    </body>
+</div>
+</html>
